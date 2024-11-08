@@ -13,7 +13,7 @@ const getTasks = async (req, res, next) => {
 
 const postTask = async(req,res,next) => {
     try {
-        if(!req.body.description || req.body.description.length ===0) {
+        if(!req.body.description || req.body.description.length === 0) {
             const error = new Error('Invalid description for task')
             error.statusCode = 400
             return next(error)

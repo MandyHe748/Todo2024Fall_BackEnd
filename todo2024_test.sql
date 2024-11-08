@@ -13,4 +13,4 @@ create table task (
 );
 
 insert into task(description) values ("My test task");
-insert into task(description) values ("My another test task");
+insert into task(description) values ("My other test task");

@@ -1,7 +1,7 @@
 import { emptyOrRows } from "../helper/utils.js"
 import {pool} from "../helper/db.js"
 import { Router } from "express"
-import  auth  from "../helper/auth.js"
+import  {auth}  from "../helper/auth.js"
 import {getTasks, postTask,deleteTask} from "../controllers/TaskController.js"
 
 const router = Router()

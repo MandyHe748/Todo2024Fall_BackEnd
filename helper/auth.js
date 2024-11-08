@@ -1,14 +1,12 @@
 import jwt from "jsonwebtoken";
 const authorizationRequired = "Authorization requried"
 const invalidCredentials = "invalid credential"
-
+const {verify} = jwt
 const auth = (req, res, next) => {
     if(!req.headers.authorization) {
         res.statusMessage = authorizationRequired
         res.status(401).json({message:authorizationRequired})
-    } 
-    
-    else {
+    } else {
         try {
             const token = req.headers.authorization
             jwt.verify(token, process.env.JWT_SECRET_KEY)
@@ -20,4 +18,4 @@ const auth = (req, res, next) => {
     }
 }
 
-export default auth
+export  {auth}
